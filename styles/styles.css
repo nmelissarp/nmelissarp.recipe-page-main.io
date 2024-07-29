@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url('../assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'YoungSerif';
+    src: url(../assets/fonts/young-serif/YoungSerif-Regular.ttf) format('truetype');
+}
+
+:root {
+    --max-width: 800px;
+    --font-paragraph: 1.6rem;
+    --font-subtitles: 2rem;
+    --fontFam-paragraph: 'Outfit';
+    --fontFam-titles: 'YoungSerif';
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: hsl(30, 54%, 90%)
+}
+
+body {
+    font-size: 1.6rem;
+    color: hsl(30, 10%, 34%);
+    margin: 4rem auto;
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 8px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container picture {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.s2 {
+    width: 100%;
+    padding: 2rem;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 3.53rem;
+    font-family: var(--fontFam-titles);
+    font-weight: normal;
+    text-align: left;
+    margin-bottom: 2rem;
+    line-height: 3.5rem;
+    color: hsl(24, 5%, 18%);
+}
+
+p, ul li, ol li, td {
+    font-size: var(--font-paragraph);
+    font-family: var(--fontFam-paragraph);
+}
+
+.s3, .s4, .s5, .s6, .s7 {
+    max-width: var(--max-width);
+    margin: 1rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.s3 {
+    background-color: hsl(330, 100%, 98%);
+    width: 100%;
+}
+
+.s4, .s5 {
+    background-color: hsl(0, 0%, 100%);
+    border-bottom: 0.2rem solid hsl(30, 18%, 87%);
+    width: 100%;
+}
+
+.s4 ul, .s5 ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.s3 ul li, .s4 ul li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.s3 ul li::marker {
+    content: '•';
+    position: absolute;
+    color: hsl(332, 51%, 32%);
+    font-size: 3rem;
+    line-height: 1;
+}
+
+h4 {
+    font-size: 2rem;
+    font-family: var(--fontFam-paragraph);
+    color: hsl(332, 51%, 32%);
+    padding-bottom: 1.5rem;
+}
+
+.s4 h2, .s5 h2, .s6 h2 {
+    font-family: var(--font-subtitles);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    color: hsl(14, 45%, 36%);
+}
+
+.s4 ul {
+    margin-left: 1rem;
+}
+
+.s4 ul li::marker {
+    content: '•';
+    position: absolute;
+    color: hsl(14, 45%, 36%);
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.s5 ol {
+    counter-reset: item;
+}
+
+.s5 ol li {
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 1rem;
+}
+
+.s5 ol li::before {
+    content: counter(item);
+    counter-increment: item;
+    position: absolute;
+    left: 0;
+    color: hsl(14, 45%, 36%);
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: bold;
+}
+
+
+.s6, .s7 {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 2rem 4rem;
+    text-align: left;
+}
+
+tr:not(:last-child) {
+    border-bottom: 0.1rem solid hsl(30, 18%, 87%);
+}
